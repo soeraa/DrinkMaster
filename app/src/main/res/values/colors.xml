@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#8BC34A</color> <!-- defaul: #3F51B5 -->
+    <color name="colorPrimaryDark">#689F38</color> <!-- defaul: #303F9F -->
+    <color name="colorAccent">#733fbb</color> <!-- (the FAB color) default: #FF4081 -->
+    <color name="green">#87BB3F</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#ff0000</color>
 </resources>

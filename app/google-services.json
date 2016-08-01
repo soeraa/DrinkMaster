@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "760510645308",
+    "firebase_url": "https://drinkmaster-40ac1.firebaseio.com",
+    "project_id": "drinkmaster-40ac1",
+    "storage_bucket": "drinkmaster-40ac1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:760510645308:android:7ce2f2b5af8cf983",
+        "android_client_info": {
+          "package_name": "net.dambakk.drinkmaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "760510645308-43np8u68cbficlt4go25vrel4b54l3v4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUo1s-SjAqf2vpQxXDZ_rroV7rHKn8W88"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
