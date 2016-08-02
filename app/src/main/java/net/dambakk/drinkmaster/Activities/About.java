@@ -1,4 +1,4 @@
-package net.dambakk.drinkmaster;
+package net.dambakk.drinkmaster.Activities;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,18 +8,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import net.dambakk.drinkmaster.R;
+
 /**
  * Created by chris on 29.07.2016.
  */
-public class Settings extends Fragment {
+public class About extends Fragment {
 
-    public Settings() {
+    public About() {
         //Required empty constructor
-
     }
 
-    public static Settings newInstance(){
-        Settings fragment = new Settings();
+    public static About newInstance(){
+        About fragment = new About();
         return fragment;
     }
 
@@ -32,9 +33,9 @@ public class Settings extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_settings, container, false);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Settings");
+        View view = inflater.inflate(R.layout.fragment_about, container, false);
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("About");
 
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return view;
     }
 }

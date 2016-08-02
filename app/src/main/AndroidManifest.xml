@@ -14,7 +14,9 @@
 
 
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -24,11 +26,15 @@
             </intent-filter>
         </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
-        <activity android:name=".NewAdventureActivity">
+        <activity android:name=".Activities.NewAdventureActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
 
         </activity>
 
-        <activity android:name=".SignInActivity">
+        <activity android:name=".Activities.SignInActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
 
         </activity>
 
@@ -49,6 +55,11 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Activities.EditProfile"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+
         </activity>
 
         <meta-data

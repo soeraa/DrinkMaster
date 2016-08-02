@@ -1,4 +1,4 @@
-package net.dambakk.drinkmaster;
+package net.dambakk.drinkmaster.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,6 +33,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import com.facebook.FacebookSdk;
 
+import net.dambakk.drinkmaster.R;
 import net.dambakk.drinkmaster.util.Keys;
 
 public class MainActivity extends AppCompatActivity
@@ -131,19 +132,7 @@ public class MainActivity extends AppCompatActivity
 
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        assert fab != null;
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        //.setAction("Action", null).show();
-                //Create intent to start "create new adventure"-activities here...
-                Intent intent = new Intent(getApplicationContext(), NewAdventureActivity.class);
-                startActivity(intent);
 
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -156,6 +145,13 @@ public class MainActivity extends AppCompatActivity
 
         // Obtain the FirebaseAnalytics instance.
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
+        Fragment fragment = new Adventures();
+        if(fragment != null){
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_frame, fragment);
+            ft.commit();
+        }
 
     }
 
@@ -203,20 +199,24 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_adventures) {
             // Handle the camera action
-            fragment = Adventures.newInstance();
+            //fragment = Adventures.newInstance();
+            fragment = new Adventures();
         } else if (id == R.id.nav_profile) {
-            fragment = Profile.newInstance();
+            //fragment = Profile.newInstance();
+            fragment = new Profile();
         } else if (id == R.id.nav_settings) {
-            fragment = Settings.newInstance();
+            //fragment = Settings.newInstance();
+            fragment = new Settings();
         } else if (id == R.id.nav_about) {
-            fragment = About.newInstance();
+            //fragment = About.newInstance();
+            fragment = new About();
         } else if (id == R.id.nav_sign_out){
             signOut();
         }
 
 
         if(fragment != null){
-            final FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_frame, fragment);
             ft.commit();
         }

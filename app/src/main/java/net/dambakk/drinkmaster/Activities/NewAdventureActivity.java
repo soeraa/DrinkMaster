@@ -1,4 +1,4 @@
-package net.dambakk.drinkmaster;
+package net.dambakk.drinkmaster.Activities;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
@@ -7,6 +7,8 @@ import android.support.annotation.StyleRes;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+
+import net.dambakk.drinkmaster.R;
 
 /**
  * Created by chris on 30.07.2016.
