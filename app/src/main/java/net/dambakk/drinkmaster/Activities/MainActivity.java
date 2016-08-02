@@ -19,6 +19,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.LoginManager;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -230,6 +231,7 @@ public class MainActivity extends AppCompatActivity
     private void signOut() {
         mFirebaseAuth.signOut();
         Auth.GoogleSignInApi.signOut(mGoogleApiClient);
+        LoginManager.getInstance().logOut();
         mUsername = ANONYMOUS;
         startActivity(new Intent(this, SignInActivity.class));
         finish();
